@@ -1,0 +1,36 @@
+<!--initially based on the sample code here: http://tinyurl.com/gmproj4
+using the javascript google maps api key from https://console.developers.google.com
+-->
+
+<!DOCTYPE html>
+<html>   
+  <head>
+    <style>
+        /*default maps element has a transparent margin and padding*/
+        html, body {
+            height: 100%;
+            padding: 0; 
+            margin: 0;
+        }
+         
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+  </head>
+  <!-- This meta node is important for view/zoom control. The map details will be very samll without this line -->
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <!-- Include JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jq.js"></script>
+    
+  <body>
+    <div id="map"></div> <!--where the map is rendered-->  
+    
+    <script src="route.js"></script>
+    <!--added my api key here and "&libraries=places" which imports the places library-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOa6NIT66QT4zO239JqSR5azRvUaaa4vI&callback=initMap&libraries=places" async defer></script>    
+  </body>
+</html>
